@@ -3,50 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mauli School of Scholars, Shegaon</title>
-<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+<title>Mauli School of Scholars, Shegaon - Official</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
-body{background:#eef5ff}
-.splash{background:linear-gradient(180deg,#dbeaff 0%, #ffffff 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
-.logo{width:110px;height:110px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.1);font-size:40px;margin-bottom:20px}
-.splash h1{color:#0f2a5a;font-size:32px;line-height:1.2}
-.splash p{color:#5a6d8e;margin:10px 0 25px 0}
-.btn-enter{background:#1565c0;color:white;border:none;padding:14px 36px;border-radius:30px;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(21,101,192,0.3)}
-.main{padding:25px;background:#f6f9ff;border-radius:30px 30px 0 0;margin-top:-20px}
-.main h2{font-size:24px;color:#0f2a5a}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
-.card{background:white;border-radius:18px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,0.06);border:1px solid #e8eef9}
-.card .icon{font-size:26px}
-.card h3{font-size:15px;margin:8px 0 4px 0;color:#0f2a5a}
-.card p{font-size:12px;color:#7a8aa8}
-.full{grid-column:span 2;background:linear-gradient(135deg,#dbeaff,#f0f6ff);text-align:center}
-.footer{text-align:center;padding:20px;color:#7a8aa8;font-size:12px}
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&display=swap');
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
+:root{--blue:#0b2e6b;--light:#eef5ff;--accent:#1565ff}
+body{background:var(--light);color:var(--blue)}
+.hero{height:100vh;background:radial-gradient(circle at top,#d9e8ff 0%, #fff 60%);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:24px;position:relative;overflow:hidden}
+.hero::before{content:'';position:absolute;top:-50%;left:-30%;width:160%;height:100%;background:radial-gradient(ellipse,#a9c6ff33 0%, transparent 70%)}
+.badge{background:#fff;padding:8px 16px;border-radius:20px;box-shadow:0 4px 12px #0001;font-size:12px;font-weight:700;letter-spacing:1px;margin-bottom:16px}
+.logo{width:120px;height:120px;background:#fff;border-radius:30px;display:flex;align-items:center;justify-content:center;box-shadow:0 20px 40px #0b2e6b1a;font-size:50px;cursor:pointer}
+.hero h1{font-size:38px;font-weight:800;line-height:1.1;margin:20px 0 10px 0;z-index:1}
+.hero p{color:#5a6f93;z-index:1}
+.btn{margin-top:24px;background:var(--blue);color:#fff;border:none;padding:16px 40px;border-radius:100px;font-size:18px;font-weight:700;box-shadow:0 12px 24px #0b2e6b33;cursor:pointer;z-index:1}
+.features{padding:30px 18px;background:#f7faff;border-radius:36px 36px 0 0;margin-top:-30px;position:relative;z-index:2}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:18px}
+.card{background:#fff;border-radius:22px;padding:20px;box-shadow:0 8px 20px #0b2e6b0f;border:1px solid #e6eefc;cursor:pointer;transition:.2s}
+.card:active{transform:scale(.97)}
+.card .ic{width:48px;height:48px;background:#eef4ff;border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:24px}
+.card h3{font-size:15px;margin-top:12px}
+.card span{font-size:12px;color:#7d8fb0}
+.card.full{grid-column:span 2;display:flex;align-items:center;gap:14px;background:linear-gradient(135deg,#0b2e6b,#1a4fa3);color:#fff}
+.card.full .ic{background:#ffffff22}
+.modal{display:none;position:fixed;inset:0;background:#0008;z-index:100;align-items:end}
+.modal.open{display:flex}
+.modal-box{background:#fff;width:100%;max-height:85vh;border-radius:30px 30px 0 0;padding:24px;overflow:auto;animation:up .3s}
+@keyframes up{from{transform:translateY(100%)}to{transform:translateY(0)}}
+.input{width:100%;padding:14px;border:1px solid #dde6f5;border-radius:12px;margin-top:10px}
+.admin-float{position:fixed;bottom:20px;right:20px;background:#000;color:#fff;padding:10px 16px;border-radius:100px;font-size:12px;display:none;z-index:200}
+.editable[contenteditable=true]{outline:2px dashed #1565ff;background:#f0f7ff}
 </style>
 </head>
 <body>
-<div class="splash">
-<div class="logo">🎓</div>
-<h1>Mauli School<br>of Scholars, Shegaon</h1>
-<p>Excellence • Discipline • Knowledge</p>
-<button class="btn-enter" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">Enter Campus →</button>
-<p style="margin-top:20px;font-size:12px">Scroll to explore ↓</p>
+<div class="hero">
+<div class="badge">EST. 2010 • SHEGAON • MAHARASHTRA</div>
+<div class="logo" id="logoClick" title="Admin Login: 5 times click">🎓</div>
+<h1 class="editable" id="schoolName">Mauli School<br>of Scholars, Shegaon</h1>
+<p class="editable" id="tagline">Excellence • Discipline • Knowledge</p>
+<button class="btn" onclick="document.getElementById('features').scrollIntoView({behavior:'smooth'})">Enter Campus →</button>
 </div>
-<div class="main" id="main">
-<h2>Explore Our Features</h2>
-<p style="color:#7a8aa8;font-size:13px;margin-top:4px">Everything you need to know about our school - all in one place</p>
-<div class="grid">
-<div class="card"><div class="icon">📚</div><h3>Academics</h3><p>Curriculum & Programs</p></div>
-<div class="card"><div class="icon">🏫</div><h3>Facilities</h3><p>Infrastructure</p></div>
-<div class="card"><div class="icon">📝</div><h3>Admissions</h3><p>Admission Process</p></div>
-<div class="card"><div class="icon">📅</div><h3>Events</h3><p>Upcoming Activities</p></div>
-<div class="card"><div class="icon">👨‍🏫</div><h3>Faculty</h3><p>Educators & Staff</p></div>
-<div class="card"><div class="icon">🖼️</div><h3>Gallery</h3><p>Photos & Videos</p></div>
-<div class="card"><div class="icon">🔔</div><h3>News & Notices</h3><p>Latest Updates</p></div>
-<div class="card"><div class="icon">📞</div><h3>Contact Us</h3><p>Reach Administration</p></div>
-<div class="card full"><div class="icon">🏆</div><h3>Student Achievements</h3><p>Celebrating our students - coming soon...</p></div>
+
+<div class="features" id="features">
+<h2 class="editable" id="exploreTitle">Explore Our Features</h2>
+<p style="color:#7d8fb0;font-size:13px" class="editable" id="exploreDesc">Everything you need to know about our school - all in one place</p>
+<div class="grid" id="grid"></div>
+<div style="text-align:center;padding:20px;color:#9aaecf;font-size:11px" onclick="adminTrigger()">© 2024 Mauli School • Admin Access</div>
 </div>
-<div class="footer">© 2024 Mauli School of Scholars, Shegaon<br>All Rights Reserved</div>
-</div>
+
+<div class="modal" id="modal" onclick="closeModal()"><div class="modal-box" onclick="event.stopPropagation()"><h2 id="mTitle"></h2><p id="mDesc" style="margin-top:12px;color:#5a6f93;line-height:1.6"></p><button class="btn" style="width:100%;margin-top:20px" onclick="closeModal()">Close</button></div></div>
+
+<div class="modal" id="adminModal"><div class="modal-box"><h2>Admin Login</h2><p style="color:#7d8fb0">Enter Admin Code to Edit</p><input type="password" id="adminCode" class="input" placeholder="Enter Code: 156"><button class="btn" style="width:100%" onclick="checkAdmin()">Unlock Editing</button><button style="width:100%;margin-top:10px;background:none;border:none;color:#7d8fb0" onclick="closeAdmin()">Cancel</button></div></div>
+
+<div class="admin-float" id="adminFloat">EDIT MODE ON • Click text to edit • <span onclick="saveAll()" style="text-decoration:underline;cursor:pointer">SAVE</span> | <span onclick="exitAdmin()" style="text-decoration:underline">EXIT</span></div>
+
+<script>
+let clicks=0;
+const defaultData=[
+{icon:"📚",title:"Academics",desc:"Curriculum & Programs",full:"Our curriculum is based on CBSE pattern with focus on conceptual learning, smart classes, and regular assessments."},
+{icon:"🏫",title:"Facilities",desc:"Infrastructure",full:"We have modern labs, library, digital classrooms, playground, and safe transport facility for all students."},
+{icon:"📝",title:"Admissions",desc:"Admission Process",full:"Admissions open for 2025-26. Visit school office with birth certificate and previous marksheet."},
+{icon:"📅",title:"Events",desc:"Upcoming Activities",full:"Annual Function, Science Exhibition, Sports Day and many cultural events are organized every year."},
+{icon:"👨‍🏫",title:"Faculty",desc:"Educators & Staff",full:"Highly qualified and experienced teachers who care for every student's growth."},
+{icon:"🖼️",title:"Gallery",desc:"Photos & Videos",full:"Photos of our school events, classrooms and achievements will be here."},
+{icon:"🔔",title:"News & Notices",desc:"Latest Updates",full:"Latest notices: 1) School reopens on 15th June 2) Fees can be paid online."},
+{icon:"📞",title:"Contact Us",desc:"Reach Administration",full:"Mauli School of Scholars, Shegaon. Phone: +91 98XXX XXXXX Email: mauli.school@gmail.com"},
+{icon:"🏆",title:"Student Achievements",desc:"Celebrating Excellence",full:"Our students have won District level Science Olympiad, Chess Championship and more!",isFull:true}
+];
+
+let data = JSON.parse(localStorage.getItem('mauli_data') || 'null') || defaultData;
+let schoolName = localStorage.getItem('mauli_name') || document.getElementById('schoolName').innerHTML;
+let tagline = localStorage.getItem('mauli_tagline') || document.getElementById('tagline').innerText;
+document.getElementById('schoolName').innerHTML=schoolName;
+document.getElementById('tagline').innerText=tagline;
+
+function render(){const g=document.getElementById('grid');g.innerHTML='';data.forEach((item,i)=>{g.innerHTML+=`<div class="card ${item.isFull?'full':''}" onclick="openModal(${i})"><div class="ic">${item.icon}</div><div><h3 class="editable" data-i="${i}" data-k="title">${item.title}</h3><span class="editable" data-i="${i}" data-k="desc">${item.desc}</span></div></div>`})}
+render();
+
+function openModal(i){document.getElementById('mTitle').innerText=data[i].title;document.getElementById('mDesc').innerText=data[i].full;document.getElementById('modal').classList.add('open')}
+function closeModal(){document.getElementById('modal').classList.remove('open')}
+
+function adminTrigger(){clicks++; if(clicks>=3){document.getElementById('adminModal').classList.add('open');clicks=0} setTimeout(()=>clicks=0,2000)}
+document.getElementById('logoClick').addEventListener('click',()=>{clicks++; if(clicks>=5){document.getElementById('adminModal').classList.add('open');clicks=0} setTimeout(()=>clicks=0,2000)})
+
+function checkAdmin(){if(document.getElementById('adminCode').value=='156'){document.getElementById('adminModal').classList.remove('open');document.querySelectorAll('.editable').forEach(el=>el.contentEditable=true);document.getElementById('adminFloat').style.display='block';alert('Admin Mode ON - Ab text pe click karke edit kar sakta hai!')}else alert('Wrong Code!')}
+function closeAdmin(){document.getElementById('adminModal').classList.remove('open')}
+function exitAdmin(){document.querySelectorAll('.editable').forEach(el=>el.contentEditable=false);document.getElementById('adminFloat').style.display='none';}
+function saveAll(){
+document.querySelectorAll('.editable[data-i]').forEach(el=>{const i=el.dataset.i; const k=el.dataset.k; data[i][k]=el.innerText});
+localStorage.setItem('mauli_data',JSON.stringify(data));
+localStorage.setItem('mauli_name',document.getElementById('schoolName').innerHTML);
+localStorage.setItem('mauli_tagline',document.getElementById('tagline').innerText);
+alert('Saved! Ab ye changes isi phone/browser me saved rahega. Permanent save ke liye GitHub me update karna padega.');
+}
+</script>
 </body>
 </html>
