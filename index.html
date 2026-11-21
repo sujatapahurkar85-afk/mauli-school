@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mauli School of Scholars, Shegaon</title>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Plus Jakarta Sans',sans-serif}
+body{background:#eef5ff}
+.splash{background:linear-gradient(180deg,#dbeaff 0%, #ffffff 100%);min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:20px}
+.logo{width:110px;height:110px;background:white;border-radius:50%;display:flex;align-items:center;justify-content:center;box-shadow:0 10px 30px rgba(0,0,0,0.1);font-size:40px;margin-bottom:20px}
+.splash h1{color:#0f2a5a;font-size:32px;line-height:1.2}
+.splash p{color:#5a6d8e;margin:10px 0 25px 0}
+.btn-enter{background:#1565c0;color:white;border:none;padding:14px 36px;border-radius:30px;font-size:18px;font-weight:700;cursor:pointer;box-shadow:0 8px 20px rgba(21,101,192,0.3)}
+.main{padding:25px;background:#f6f9ff;border-radius:30px 30px 0 0;margin-top:-20px}
+.main h2{font-size:24px;color:#0f2a5a}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:18px}
+.card{background:white;border-radius:18px;padding:18px;box-shadow:0 4px 15px rgba(0,0,0,0.06);border:1px solid #e8eef9}
+.card .icon{font-size:26px}
+.card h3{font-size:15px;margin:8px 0 4px 0;color:#0f2a5a}
+.card p{font-size:12px;color:#7a8aa8}
+.full{grid-column:span 2;background:linear-gradient(135deg,#dbeaff,#f0f6ff);text-align:center}
+.footer{text-align:center;padding:20px;color:#7a8aa8;font-size:12px}
+</style>
+</head>
+<body>
+<div class="splash">
+<div class="logo">🎓</div>
+<h1>Mauli School<br>of Scholars, Shegaon</h1>
+<p>Excellence • Discipline • Knowledge</p>
+<button class="btn-enter" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">Enter Campus →</button>
+<p style="margin-top:20px;font-size:12px">Scroll to explore ↓</p>
+</div>
+<div class="main" id="main">
+<h2>Explore Our Features</h2>
+<p style="color:#7a8aa8;font-size:13px;margin-top:4px">Everything you need to know about our school - all in one place</p>
+<div class="grid">
+<div class="card"><div class="icon">📚</div><h3>Academics</h3><p>Curriculum & Programs</p></div>
+<div class="card"><div class="icon">🏫</div><h3>Facilities</h3><p>Infrastructure</p></div>
+<div class="card"><div class="icon">📝</div><h3>Admissions</h3><p>Admission Process</p></div>
+<div class="card"><div class="icon">📅</div><h3>Events</h3><p>Upcoming Activities</p></div>
+<div class="card"><div class="icon">👨‍🏫</div><h3>Faculty</h3><p>Educators & Staff</p></div>
+<div class="card"><div class="icon">🖼️</div><h3>Gallery</h3><p>Photos & Videos</p></div>
+<div class="card"><div class="icon">🔔</div><h3>News & Notices</h3><p>Latest Updates</p></div>
+<div class="card"><div class="icon">📞</div><h3>Contact Us</h3><p>Reach Administration</p></div>
+<div class="card full"><div class="icon">🏆</div><h3>Student Achievements</h3><p>Celebrating our students - coming soon...</p></div>
+</div>
+<div class="footer">© 2024 Mauli School of Scholars, Shegaon<br>All Rights Reserved</div>
+</div>
+</body>
+</html>
